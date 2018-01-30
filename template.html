@@ -1,0 +1,28 @@
+<html>
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  </head>
+  <body>
+
+  <form action="http://lamhq.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+
+    <!-- optinal fields -->
+    <input type="hidden" name="Content-Type" value="image/jpeg" /><br />
+    <input type="hidden" name="success_action_status" value="200" />
+
+    <!-- required fields -->
+    <input type="hidden" name="policy" value="%{policy}" />
+    <input type="hidden" name="x-amz-signature" value="%{signature}" />
+
+    <input type="hidden" name="x-amz-credential" value="%{accessKeyId}/%{date}/%{region}/%{service}/aws4_request" />
+    <input type="hidden" name="x-amz-algorithm" value="AWS4-HMAC-SHA256" />
+    <input type="hidden" name="x-amz-date" value="%{date}T000000Z" />
+    <input type="hidden" name="key" value="%{keyPrefix}${filename}" /><br />
+    <input type="hidden" name="acl" value="public-read" />
+    <input type="file" name="file" /> <br />
+    <button type="submit">Upload to Amazon S3</button>
+  </form>
+
+</html>
