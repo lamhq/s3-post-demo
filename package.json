@@ -1,7 +1,7 @@
 {
   "name": "s3-post-demo",
   "version": "1.0.0",
-  "description": "Demo of upload content directly from browser to Amazon S3 using POST",
+  "description": "Demo of upload content directly from browser to Amazon S3 using HTTP POST",
   "main": "test.js",
   "scripts": {
     "start": "nodemon index.js",

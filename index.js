@@ -26,7 +26,6 @@ function getSignature(params) {
   var regionKey = cryptoJs.HmacSHA256(region, dateKey)
   var serviceKey = cryptoJs.HmacSHA256(service, regionKey)
   var signatureKey = cryptoJs.HmacSHA256('aws4_request', serviceKey)
-  console.log(params)
   return cryptoJs.HmacSHA256(base64Policy, signatureKey).toString(cryptoJs.enc.Hex)
 }
 
