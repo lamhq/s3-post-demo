@@ -1,8 +1,8 @@
 const cryptoJs = require('crypto-js')
 
 const defOptions = {
-  accessKeyId: 'AKIAJZYDLKBI7KI7ZF6Q',
-  secretAccessKey: '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',
+  accessKeyId: 'AKIAIIP4PGH4IS7KLYJQ',
+  secretAccessKey: '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',
   bucket: 'lamhq',
   region: 'ap-southeast-1',
   service: 's3',
